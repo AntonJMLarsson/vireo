@@ -24,7 +24,7 @@ class Vireo():
     GT_prob: numpy array (n_var, n_donor, n_GT)
         Posterior genotype probability per variant per donor
     """
-    def __init__(self, n_cell, n_var, n_donor, n_GT=3, learn_GT=True,  
+    def __init__(self, n_cell, n_var, n_donor, n_GT=2, learn_GT=True,  
         learn_theta=True, ASE_mode=False, fix_beta_sum=False, 
         beta_mu_init=None, beta_sum_init=None, ID_prob_init=None, 
         GT_prob_init=None):
