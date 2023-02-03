@@ -175,9 +175,9 @@ class Vireo():
         _theta_s2 += self.theta_s2_prior.copy()
         for ig in range(self.n_GT):
             _axis = 1 if self.ASE_mode else None
-            _theta_s1[:, ig:(ig+1)] += np.sum(
+            _theta_s1[:, ig] += np.sum(
                 S1_gt * self.GT_prob[:, :, ig], axis=_axis, keepdims=True)
-            _theta_s2[:, ig:(ig+1)] += np.sum(
+            _theta_s2[:, ig] += np.sum(
                 S2_gt * self.GT_prob[:, :, ig], axis=_axis, keepdims=True)
         
         self.beta_mu = _theta_s1 / (_theta_s1 + _theta_s2)
